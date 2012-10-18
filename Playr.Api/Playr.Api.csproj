@@ -45,6 +45,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\RavenDB.Database.1.2.2045-Unstable\lib\net40\Esent.Interop.dll</HintPath>
     </Reference>
+    <Reference Include="Gate">
+      <HintPath>..\packages\Gate.0.18\lib\net40\Gate.dll</HintPath>
+    </Reference>
+    <Reference Include="Gate.Middleware">
+      <HintPath>..\packages\Gate.Middleware.0.18\lib\net40\Gate.Middleware.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.NRefactory, Version=3.0.0.3800, Culture=neutral, PublicKeyToken=efe927acf176eea2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\RavenDB.Database.1.2.2045-Unstable\lib\net40\ICSharpCode.NRefactory.dll</HintPath>
@@ -64,6 +70,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\RavenDB.Database.1.2.2045-Unstable\lib\net40\Lucene.Net.Contrib.SpellChecker.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.HttpListener.Owin">
+      <HintPath>..\packages\Microsoft.HttpListener.Owin.0.8\lib\Microsoft.HttpListener.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -74,6 +83,12 @@
     </Reference>
     <Reference Include="NLog">
       <HintPath>..\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin.Builder">
+      <HintPath>..\packages\Owin.Builder.0.4\lib\net40\Owin.Builder.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin.Startup">
+      <HintPath>..\packages\Owin.Startup.0.4\lib\net40\Owin.Startup.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions, Version=1.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -110,6 +125,9 @@
     <Reference Include="SignalR.Hosting.Common, Version=0.5.1.10822, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SignalR.Hosting.Common.0.5.3\lib\net40\SignalR.Hosting.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalR.Hosting.Owin">
+      <HintPath>..\packages\SignalR.Hosting.Owin.0.5.3\lib\net40\SignalR.Hosting.Owin.dll</HintPath>
     </Reference>
     <Reference Include="SignalR.Hosting.Self, Version=0.5.1.10822, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -160,6 +178,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Routes.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
