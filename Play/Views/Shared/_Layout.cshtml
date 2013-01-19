@@ -61,5 +61,6 @@
     @Scripts.Render("~/assets/scripts/bootstrap")
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
     @RenderSection("scripts", required: false)
+    <script src="@(Play.Helpers.GetNotificationUrl() + "/signalr/hubs")"></script>
 </body>
 </html>

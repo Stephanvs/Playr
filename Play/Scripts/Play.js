@@ -1,20 +1,27 @@
-﻿function PlayController($scope) {
-    $scope.nowPlaying = {
-        artist: 'Jason Mraz',
-        songTitle: 'The Remedy',
-        albumTitle: 'Waiting for My Rocket to Come',
-        albumArtUrl: 'https://lh6.googleusercontent.com/-A_kpvHTz4x0/AAAAAAAAAAI/AAAAAAAAAKc/Z4gA-QiPlS8/s250-c-k/photo.jpg',
-        backdropImageUrl: 'http://www.htbackdrops.com/v2/albums/userpics/12686/normal_jason_mraz1.jpg'
+﻿function PlayController($scope, $http) {
+
+    $scope.updateCurrentTrack = function() {
+        $http.get('home/GetQueue').success(function(data) {
+            $scope.CurrentTrack = data.CurrentTrack;
+        });
     };
+    $scope.updateCurrentTrack();
+
+    var hub = $.connection.playr;
+
+    hub.DjInfoUpdated = $scope.updateCurrentTrack;
+
+    $.connection.hub.url = "http://localhost:5554/signalr";
+    $.connection.hub.start();
 }
 
 function PlaylistController($scope) {
-    
+
 
 }
 
 function BackdropController($scope) {
-    $scope.updateBackdrop = function(backdropUrl) {
+    $scope.updateBackdrop = function (backdropUrl) {
         // todo: update backdrop image
     };
 }

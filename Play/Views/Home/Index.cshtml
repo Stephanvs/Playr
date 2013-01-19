@@ -4,18 +4,18 @@
     <div class="now-playing" ng-controller="PlayController">
         <div class="album-art">
             <a href="#">
-                <img ng-src="{{nowPlaying.albumArtUrl}}" class="image" alt="">
+                <img ng-src="{{CurrentTrack.ArtworkUrl}}" class="image" alt="">
             </a>
         </div>
 
         <div class="song-info">
-            <h1 class="artist">{{nowPlaying.artist}}</h1>
-            <h2 class="song-title">{{nowPlaying.songTitle}}</h2>
-            <h2 class="album-title">{{nowPlaying.albumTitle}}</h2>
+            <h1 class="artist">{{CurrentTrack.Artist}}</h1>
+            <h2 class="song-title">{{CurrentTrack.Title}}</h2>
+            <h2 class="album-title">{{CurrentTrack.Album}}</h2>
         </div>
     </div>
 
-    <section class="playlist" ng-controller="PlaylistController">
+    @*<section class="playlist" ng-controller="PlaylistController">
         
         <ul class="unstyled">
             <li class="now-playing">
@@ -29,6 +29,6 @@
             </li>
         </ul>
 
-    </section>
+    </section>*@
 
 </div>
