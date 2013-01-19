@@ -1,0 +1,34 @@
+﻿<div class="backdrop" ng-controller="BackdropController"></div>
+
+<div class="container">
+    <div class="now-playing" ng-controller="PlayController">
+        <div class="album-art">
+            <a href="#">
+                <img ng-src="{{nowPlaying.albumArtUrl}}" class="image" alt="">
+            </a>
+        </div>
+
+        <div class="song-info">
+            <h1 class="artist">{{nowPlaying.artist}}</h1>
+            <h2 class="song-title">{{nowPlaying.songTitle}}</h2>
+            <h2 class="album-title">{{nowPlaying.albumTitle}}</h2>
+        </div>
+    </div>
+
+    <section class="playlist" ng-controller="PlaylistController">
+        
+        <ul class="unstyled">
+            <li class="now-playing">
+                <div class="status">
+                    <i class="icon-music"></i>
+                </div>
+                <div class="song">
+                    <div class="song-title">The Remedy</div>
+                    <div class="song-artist">Jason Mraz</div>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+</div>
