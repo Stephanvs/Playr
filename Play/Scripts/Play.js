@@ -7,6 +7,11 @@
     };
     $scope.updateCurrentTrack();
 
+    $scope.previous = function() {
+        $.ajax({ url: 'home/Previous' });
+    };
+
+
     var hub = $.connection.playr;
 
     hub.DjInfoUpdated = $scope.updateCurrentTrack;
@@ -15,10 +20,6 @@
     $.connection.hub.start();
 }
 
-function PlaylistController($scope) {
-
-
-}
 
 function BackdropController($scope) {
     $scope.updateBackdrop = function (backdropUrl) {

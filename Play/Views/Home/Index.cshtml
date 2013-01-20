@@ -1,7 +1,7 @@
 ﻿<div class="backdrop" ng-controller="BackdropController"></div>
 
-<div class="container">
-    <div class="now-playing" ng-controller="PlayController">
+<div class="container" ng-controller="PlayController">
+    <div class="now-playing">
         <div class="album-art">
             <a href="#">
                 <img ng-src="{{CurrentTrack.ArtworkUrl}}" class="image" alt="">
@@ -14,13 +14,23 @@
             <h2 class="album-title">{{CurrentTrack.Album}}</h2>
         </div>
     </div>
+    
+    <section class="controls">
+        <div class="">
+            <span data-icon="previous"><a href="" ng-click="previous()">&#9194;</a></span>
+            <span data-icon="play-pause">&#9654;&#8214;</span>
+            <span data-icon="next">&#9193;</span>
+            <span data-icon="stop">&#9632;</span>
+            <span data-icon="loop">&#128257;</span>
+        </div>
+    </section>
 
-    @*<section class="playlist" ng-controller="PlaylistController">
+    <section class="playlist">
         
         <ul class="unstyled">
             <li class="now-playing">
                 <div class="status">
-                    <i class="icon-music"></i>
+                    <span data-icon="music">&#9835;</span>
                 </div>
                 <div class="song">
                     <div class="song-title">The Remedy</div>
@@ -29,6 +39,6 @@
             </li>
         </ul>
 
-    </section>*@
+    </section>
 
 </div>
